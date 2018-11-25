@@ -15,3 +15,15 @@ Branch items:
 - **extra_sweetness**: Introduces twoway binding between components, Using templates and containers, ngIf and observables and else-templates,
 - **redux**: introduces ngxs to angular, some basics and and example
 - **Master**: this is the final product, when everything is done.
+
+## Steps in this part
+
+1. Generate the component files using Angular CLI:
+
+```sh
+ng generate component userGrid
+```
+
+2. Add the component to the app.component.html
+3. Add @Input() to user-grid.component.ts
+4.
