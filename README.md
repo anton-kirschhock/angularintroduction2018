@@ -2,7 +2,7 @@
 
 Livedemo content from my 2018 Introduction to Angular.
 
-## How to use
+## How to use this repository
 
 Each live demo is linked to a certain branch. You can see the branch name in the top right corner of the slide. Each branch is the finalized product of that slide.
 
