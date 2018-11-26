@@ -98,3 +98,12 @@ export class AppComponent implements OnInit {
   </tbody>
 </table>
 ```
+
+8. Optional: Add Angular Material, creating a Common Components module & using it:
+
+```sh
+ng add @angular/material;
+ng g module commonComponents
+```
+
+More information can be found here: https://material.angular.io/guide/getting-started
