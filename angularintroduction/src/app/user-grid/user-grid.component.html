@@ -1,3 +1,18 @@
-<p>
-  user-grid works!
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Full name</th>
+      <th>Email</th>
+      <th>DOB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of dataSource">
+      <td>{{ user.id }}</td>
+      <td>{{ user.firstName }} {{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.dateOfBirth }}</td>
+    </tr>
+  </tbody>
+</table>
