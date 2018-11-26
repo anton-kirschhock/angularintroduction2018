@@ -9,7 +9,7 @@ import { User } from '../models/user';
 })
 export class UserGridComponent implements OnInit {
   @Input() dataSource: User[];
-
+  public readonly displayedColumns = ['id', 'fullName', 'email', 'dob'];
   constructor() {}
 
   ngOnInit() {}
