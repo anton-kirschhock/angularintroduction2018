@@ -18,4 +18,92 @@ Branch items:
 
 ## Steps in this part
 
-TODO
+1. Generate the component files using Angular CLI:
+
+```sh
+ng generate component userGrid
+```
+
+2. Create a interface to define the model => models/user.ts
+
+```ts
+export interface User {
+  id: number;
+  name: string;
+  firstName: string;
+  email: string;
+  dateOfBirth: string;
+}
+```
+
+3. Create user.service.ts service:
+
+```ts
+@Injectable({ providedIn: 'root' })
+export class UserService {
+  public getAll(): User[] {
+    return this.getUserList();
+  }
+
+  private getUserList(): User[] {
+    return [...];
+  }
+}
+```
+
+4. Add @Input() to user-grid.component.ts
+
+```ts
+  @Input() dataSource: User[];
+```
+
+5. Add the property userList to app.component and inject the service
+
+```ts
+export class AppComponent implements OnInit {
+  public userList: User[];
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.userList = this.userService.getAll();
+  }
+}
+```
+
+6. Add the component to the app.component.html and one way binding:
+
+```html
+<app-user-grid [dataSource]="userList"></app-user-grid>
+```
+
+7. Add the HTML to the user-grid:
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Full name</th>
+      <th>Email</th>
+      <th>DOB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of dataSource">
+      <td>{{ user.id }}</td>
+      <td>{{ user.firstName }} {{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.dateOfBirth }}</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+8. Optional: Add Angular Material, creating a Common Components module & using it:
+
+```sh
+ng add @angular/material;
+ng g module commonComponents
+```
+
+More information can be found here: https://material.angular.io/guide/getting-started
