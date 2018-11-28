@@ -20,3 +20,8 @@ body {
 mat-card {
   background-color: white;
 }
+
+tr.navigatable-row:hover {
+  cursor: pointer;
+  background: #afafaf;
+}

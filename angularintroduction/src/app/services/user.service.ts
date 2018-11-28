@@ -8,6 +8,10 @@ export class UserService {
     return this.getUserList();
   }
 
+  getById(id: number): User {
+    return this.getUserList().find(u => u.id === id);
+  }
+
   private getUserList(): User[] {
     return [
       {

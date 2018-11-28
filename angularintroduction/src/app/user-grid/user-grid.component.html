@@ -25,7 +25,12 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      <tr
+        class="navigatable-row"
+        (click)="navigate(row.id)"
+        mat-row
+        *matRowDef="let row; columns: displayedColumns"
+      ></tr>
     </table>
   </mat-card-content>
 </mat-card>
