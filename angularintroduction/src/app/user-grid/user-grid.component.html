@@ -1,7 +1,7 @@
 <mat-card class="mat-elevation-z8">
   <mat-card-header> <h1>Users</h1> </mat-card-header>
   <mat-card-content>
-    <table mat-table [dataSource]="dataSource" class="full-width">
+    <table mat-table [dataSource]="dataSource$ | async" class="full-width">
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>#</th>
         <td mat-cell *matCellDef="let element">{{ element.id }}</td>

@@ -11,11 +11,13 @@ import { CommonComponentsModule } from './common-components/common-components.mo
 import { DetailResolver } from './detail.resolver';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserGridComponent } from './user-grid/user-grid.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, UserGridComponent, UserDetailComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRouting),
     BrowserModule,

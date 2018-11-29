@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
@@ -10,12 +11,15 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user-grid.component.css']
 })
 export class UserGridComponent implements OnInit {
-  @Input() dataSource: User[];
+  dataSource$: Observable<User[]>;
   public readonly displayedColumns = ['id', 'fullName', 'email', 'dob'];
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit() {
-    this.dataSource = this.userService.getAll();
+    this.dataSource$ = this.userService.getAll();
+    // .pipe(
+    //   map(users => users.filter(u => u.name.toLowerCase().startsWith('a')))
+    // );
   }
 
   navigate(id: number) {
