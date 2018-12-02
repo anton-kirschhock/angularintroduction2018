@@ -24,16 +24,7 @@
           name="name"
         />
       </mat-form-field>
-      <mat-form-field class="full-width">
-        <mat-label>Email</mat-label>
-        <input
-          matInput
-          placeholder="Email"
-          type="email"
-          [(ngModel)]="user.email"
-          name="email"
-        />
-      </mat-form-field>
+      <app-email-editor [(email)]="user.email"></app-email-editor>
       <mat-form-field class="full-width">
         <mat-label>DOB</mat-label>
         <input
