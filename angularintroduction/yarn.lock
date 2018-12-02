@@ -281,6 +281,24 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
+"@ngxs/devtools-plugin@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@ngxs/devtools-plugin/-/devtools-plugin-3.3.1.tgz#519f6000ac8ea7712b249239f07ec091a29b1da8"
+  dependencies:
+    tslib "^1.9.0"
+
+"@ngxs/logger-plugin@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@ngxs/logger-plugin/-/logger-plugin-3.3.1.tgz#8e532157776f9f13a4096d8f906513d0812bbf4e"
+  dependencies:
+    tslib "^1.9.0"
+
+"@ngxs/store@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@ngxs/store/-/store-3.3.1.tgz#f0495fbc3d18a49f8c9c3e17698f6ea835b1a4ca"
+  dependencies:
+    tslib "^1.9.0"
+
 "@schematics/angular@0.8.7":
   version "0.8.7"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.8.7.tgz#472b8d37a741b2aa9c3823d77293eb670f224ceb"
