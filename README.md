@@ -97,7 +97,7 @@ export class UserState {
 
 ```
 
-By making an action cancelUncompleted, We tell ngsx that there is an observable involved.
+By making an action cancelUncompleted, We tell ngsx that there is an observable involved and that it is possible to cancel the previous executing action when there is a new one triggered.
 
 Now create a Selector within the user.state.ts
 
